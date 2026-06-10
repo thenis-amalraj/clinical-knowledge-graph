@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/scripts/post-edit.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
