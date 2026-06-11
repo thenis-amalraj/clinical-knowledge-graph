@@ -141,6 +141,7 @@ services:
     volumes:
       - ./api:/app/api
       - ./extraction:/app/extraction
+      - ./graph_db:/app/graph_db
     depends_on:
       neo4j:
         condition: service_healthy
