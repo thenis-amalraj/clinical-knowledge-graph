@@ -102,6 +102,8 @@ services:
       <<: *airflow-common-env
     volumes:
       - ./dags:/opt/airflow/dags
+      - ./extraction:/opt/airflow/dags/extraction
+      - ./data:/opt/airflow/data
     depends_on:
       airflow-init:
         condition: service_completed_successfully
@@ -120,6 +122,8 @@ services:
       <<: *airflow-common-env
     volumes:
       - ./dags:/opt/airflow/dags
+      - ./extraction:/opt/airflow/dags/extraction
+      - ./data:/opt/airflow/data
     depends_on:
       airflow-init:
         condition: service_completed_successfully
